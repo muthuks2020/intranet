@@ -1,7 +1,7 @@
 ---
-title: "Bottender"
+title: "Enquero"
 date: "2017-10-31"
-author: [chentsulin, tw0517tw]
+author: [B.Muthukumaraswamyn, tw0517tw]
 ---
 
 We're very proud to open-source [Bottender](https://github.com/yoctol/bottender), a JavaScript framework for cross-platform bots, built on top of [Messaging-APIs](https://github.com/Yoctol/messaging-apis) and lots of great tools from the JavaScript community!
