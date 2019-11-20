@@ -1,52 +1,19 @@
 ---
-title: Error Handling
-date: "2017-10-13"
+title: Content
+
 ---
 
-When you develop a bot using Bottender, you can use the following approaches for error handling:
 
-- [Try Catch](#try-catch)
-- [onError](#onerror)
 
-### Try Catch
+## Heading
 
-Bottender leverages one of the JS features `async/await`. It means that you can use [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to handle errors.
 
-Put the `try block` inside the handler function, and the error will be caught.
 
-For example:
+```sh
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-```js
-bot.onEvent(async context => {
-  try {
-    await fetch('');
-    await context.sendText('');
-  } catch (err) {
-    // handle errors here...
-  }
-});
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
 ```
-
-## builder.onError
-
-Bottender also supports builder approaches to handle errors. Use `builder.onError` and pass the error handler function. You will get the error at the second parameter in the handler function.
-
-For example:
-
-```js
-// you can choose other supported handler accroding to the platform
-const { MessengerHandler } = require('bottender');
-
-const handler = new MessengerHandler()
-  .onEvent(async context => {
-    throw new Error('An error happened!');
-  })
-  .onError(async (context, err) => {
-    // handle errors here...
-    await context.sendText(err.message);
-  });
-
-bot.onEvent(handler);
-```
-
-[Here](https://github.com/Yoctol/bottender/tree/master/examples/messenger-builder) is the full example of Messenger builder.

@@ -22,7 +22,7 @@ class Sidebar extends Component {
         {List.map(list => {
           const selectedTitle = pathname
             .replace(
-              /(\/bottender-docs)?\/(docs|blog)\/.*?((Guides|APIReference|Platforms)-)?/i,
+              /(\/bottender-docs)?\/(docs|blog)\/.*?((Guides1|APIReference1|Platforms1)-)?/i,
               ''
             )
             .replace(/\/?[0-9]*/g, '')

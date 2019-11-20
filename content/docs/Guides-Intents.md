@@ -1,78 +1,19 @@
 ---
-title: Intents
-date: "2017-10-13"
+title: Content
+
 ---
 
-## Events
 
-Every time when there is an incoming request, the [handler](./APIReference-Handler) will be called and parse out events from the request. Afterwards, the Event instance is attached to [context](./APIReference-Context) so that you can access it via `context.event`.  
-Bottender help you recognize what kind of messages or payloads are sent from users. In this way, you are able to handle intents more easily.
 
-Check [Event Reference](./APIReference-Event) to get more information about event.
+## Heading
 
-## Pattern Matching
 
-### String Comparison
 
-Here's an example handler which only handles specific commands:
+```sh
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-```js
-bot.onEvent(async context => {
-  if (context.event.isText) {
-    switch (context.event.text) {
-      case '/start':
-        await context.sendText('Running....');
-        break;
-      case '/help':
-        await context.sendText(`
-/start   start to run
-/help    quick help on <command>
-        `);
-        break;
-      default:
-        await context.sendText(`${context.event.text} is not a valid command.`);
-    }
-  }
-});
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
 ```
-
-### Regular Expression
-
-Exactly matching looks a little rigid. Consider using some equality operators to determine whether receiving greeting words or not:
-
-```js
-bot.onEvent(async context => {
-  if (context.event.isText) {
-    const { text } = context.event.message;
-    if (text === 'hello' || text === 'hi') {
-      // ...
-    }
-  }
-});
-```
-
-It only matches `hello` and `hi`. Neither `Hello` nor `hi~` would work in the above example.
-
-We can use [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for more general pattern matching. It will be helpful when building rule-based logic.
-
-```js
-bot.onEvent(async context => {
-  if (context.event.isText) {
-    const { text } = context.event.message;
-    if (/^h(ello|i)/i.test(text)) {
-      // ...
-    }
-  }
-});
-```
-
-Now, not only `hello`, `hi` but also `Hello`, `hi~` will be matched.
-
-## Leverage NLU Technologies
-
-If you want to have more general intent recognition, you can leverage modern NLU (Natural Language Understanding) technologies. They can help you recognize the intent of user input sentences. There are several online services you can choose from, for example:
-
-- [LUIS.ai](https://www.luis.ai/) from Microsoft
-- [Dialogflow](https://dialogflow.com/) (formerly api.ai) from Google
-- [wit.ai](https://wit.ai/) from Facebook
-- [Watson](https://www.ibm.com/watson/) from IBM

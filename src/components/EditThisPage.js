@@ -21,7 +21,7 @@ const Btn = styled.a`
 const EditThisPage = ({ pathname }) => (
   <Wrapper>
     <Btn
-      href={`https://github.com/bottenderjs/bottenderjs.github.io/blob/source/content/${pathname}`}
+      href={`https://github.com/muthuks2020/intranet/tree/master/content/${pathname}`}
     >
       Edit This Page
     </Btn>

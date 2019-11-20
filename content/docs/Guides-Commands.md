@@ -1,76 +1,19 @@
 ---
-title: Commands
-date: "2017-10-17"
+title: Content
+
 ---
 
-The following introduction shows the Bottender command-line interface usage.
 
-## Setup
 
-To use Bottender CLI tools, you need to install `bottender` globally:
+## Heading
 
-```sh
-npm install -g bottender
-```
 
-Or use [`npx`](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)(already installed in `npm@5.2.0` or greater) to get local `bottender` installation:
 
 ```sh
-npx bottender
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
 ```
-
-Some commands will need a `bottender.config.js` file to be properly configured.
-
-## Usage
-
-The command-line interface included within bottender provides a number of helpful commands.
-
-```sh
-bottender
-```
-
-Or use `btd` shorthand:
-
-```sh
-btd
-```
-
-To see all of the available commands, simply use the `--help` option:
-
-```sh
-bottender --help
-```
-
-Every command has a "help" screen which displays and describes the command's available arguments and options. To view them, simply precede the name of the command with `--help`:
-
-```sh
-bottender init --help
-```
-
-## Create Bot
-
-You can use interactive CLI to create your bots:
-
-```sh
-bottender init
-```
-
-After answer a few questions, a new bot will be ready for you.
-
-## Platform Specific Commands
-
-To use platform specific commands, just type name of platform behind the `bottender` command.
-
-For example, to set Messenger profile for your bots:
-
-```sh
-bottender messenger profile set
-```
-
-Or to get Telegram webhook information:
-
-```sh
-bottender telegram webhook get
-```
-
-Provide `--help` to see the details.

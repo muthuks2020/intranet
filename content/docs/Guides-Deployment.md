@@ -1,108 +1,19 @@
 ---
-title: Deployment
-date: "2017-10-15"
+title: Content
+
 ---
 
-Deploying a Bottender server is as easy as deploying a regular Node server.
 
-In this section, following fast and simple ways of deployment are introduced:
 
-- [Now](https://zeit.co/now)
-- [Heroku](https://www.heroku.com/home)
+## Heading
 
-Note that these services have limited free dynos. If your bots need to be up 24/7, you should consider paid plans or other services.
 
-## Now
-
-You can set vars in `bottender.config.js` as environment vars and secrets.
-
-### Secrets
 
 ```sh
-$ now secret add my_verify_token 1qaz2wsx
-```
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-You can list, rename and remove your secrets by the following commands:
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-```sh
-$ now secret ls
-$ now secret rename my_verify_token verify_token
-$ now secret rm my_verify_token
-```
 
-### Environment Variables
-
-Use `@var` to set the environment variable with your now secrets.
-
-```sh
-$ now -e VERIFY_TOKEN=1qaz2wsx
-$ now -e VERIFY_TOKEN=@verify_token
-```
-
-### Deploy
-
-```sh
-$ now
-```
-
-### List Project
-
-```sh
-$ now ls
-```
-
-### Alias
-
-Make alias to set your customized domain.
-
-```sh
-$ now alias zeit-suslhdzwiy.now.sh workshop // workshop.now.sh
-$ now alias zeit-suslhdzwiy.now.sh bottender.com // upgrade plan
-```
-
-## Heroku
-
-You can deploy your bot on Heroku simply using Heroku CLI after creating a new app.
-
-```sh
-$ heroku login
-```
-
-### Creating a New Git Repository
-
-```sh
-$ cd my-project/
-$ git init
-$ heroku git:remote -a your-app-name // for existing repositories, simply add heroku remote
-```
-
-### Setting Server Port
-
-[Heroku](https://devcenter.heroku.com/articles/runtime-principles#web-servers) use `$PORT` environment variable to tell apps which port should their server listen. You should make sure your bot server is listening on `process.env.PORT` instead of any other hard-coded ports.
-
-For example,
-
-```js
-const port = process.env.PORT || 5000;
-server.listen(port, () => {
-  console.log(`server is running on ${port} port...`);
-});
-```
-
-### Setting Node Version
-
-Make sure your Node version on Heroku is higher than 7.6.0. These lines can be added to `package.json` to specify the Node version.
-
-```json
-"engines": {
-  "node": ">= 7.6.0"
-}
-```
-
-### Deploy
-
-```sh
-$ git add .
-$ git commit -am "make it better"
-$ git push heroku master
 ```

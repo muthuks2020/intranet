@@ -1,108 +1,19 @@
 ---
-title: Testing
-date: "2017-10-15"
+title: Content
+
 ---
 
-Bottender is built with testing in mind. Your tests could be run with any JavaScript test runners, such as [Jest](https://facebook.github.io/jest/), [Mocha](https://mochajs.org/), [AVA](https://github.com/avajs/ava), and so on.
 
-## Unit Test
 
-Unit tests are tests that focus on the isolated portion of your code, and you can find bugs efficiently when the complexity of code grows as time goes on.
+## Heading
 
-When creating bots using Bottender, the primary logic of bot is inside your event handler.
 
-```js
-// bot.js
-const handler = require('./handler');
 
-bot.onEvent(handler);
+```sh
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
 ```
-
-```js
-// handler.js
-module.exports = async context => {
-  if (context.event.isText) {
-    await context.sendText('You say: ' + context.event.text);
-  } else if (context.event.isMessage) {
-    await context.sendText('Sorry, I only read text messages.');
-  }
-};
-```
-
-Then, we can start to test it with a mock context.
-
-### Context Mocking
-
-Handlers are just async functions that accept a single context argument. Now, we can use fake ones in the unit tests.
-
-Here is an example test written with [Jest](https://facebook.github.io/jest/):
-
-```js
-// __tests__/handler.spec.js
-const handler = require('../handler');
-
-it('should work', async () => {
-  const context = {
-    event: {
-      isMessage: true,
-      isText: true,
-      text: 'Awesome',
-      message: {
-        text: 'Awesome',
-      },
-    },
-    sendText: jest.fn(),
-  };
-
-  await handler(context);
-
-  expect(context.sendText).toBeCalledWith('You say: Awesome');
-});
-```
-
-After calling the async handler, we can write some assertions to make sure that everything works as expected.
-
-> Note: We use `jest.fn` in the example but feel free to use [Sinon](http://sinonjs.org/) or any other mocking libraries.
-
-### Test Utils
-
-We provide some test utils in the package for convenience purpose. It's worth mentioning `ContextSimulator` here, and you can import it from `bottender/test-utils`:
-
-```js
-const { ContextSimulator } = require('bottender/test-utils');
-```
-
-After simulator instantiated with a specific platform, you can create a mocking context with several helper methods:
-
-```js
-const simulator = new ContextSimulator({
-  platform: 'messenger',
-});
-
-const context = simulator.createTextContext('Awesome');
-```
-
-And we can use created context same way as the above example:
-
-```js
-// __tests__/handler.spec.js
-const { ContextSimulator } = require('bottender/test-utils');
-
-const handler = require('../handler');
-
-const simulator = new ContextSimulator({
-  platform: 'messenger',
-});
-
-it('should work', async () => {
-  const context = simulator.createTextContext('Awesome');
-
-  await handler(context);
-
-  expect(context.sendText).toBeCalledWith('You say: Awesome');
-});
-```
-
-## E2E Test
-
-Coming Soon. We are working on a brand-new end-to-end testing library for bots. We will release it in the near future.

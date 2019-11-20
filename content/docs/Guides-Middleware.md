@@ -1,54 +1,19 @@
 ---
-title: Middleware
-date: "2017-10-11"
+title: Content
+
 ---
 
-Compose handlers.
-Sometimes you may want to use multiple handlers to handle one event so you can reuse each of them on different situation. We provide `middleware` method which enables you to compose multiple handlers in a functional style.
 
-> Middleware are simple functions which return a MiddlewareFunction with signature (ctx, next). When the middleware is run, it must manually invoke next() to run the "downstream" middleware.
->
-> -- <cite>koa</cite>
 
-## API
+## Heading
 
-### middleware([handler1, handler2, ...])
 
-Compose the given handlers as a middleware and return a composed handler.
 
-Handlers is an array of functions with args like below:
+```sh
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-```js
-/**
- * @param {Object} context - A context can use all methods in client (see {@link
- *     https://github.com/Yoctol/messaging-apis}|messaging-apis}) and sessions.
- * @param {Function} next - call `next()` to pass control to the next handler.
- */
-function handler(context, next) {
-  /* ... */
-}
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
 ```
-
-## Example
-
-```js
-const { middleware } = require('bottender');
-
-...
-
-const composedHandler = middleware([
-  function handler1(context, next) { /* ... */ },
-  function handler2(context, next) { /* ... */ },
-  ...,
-]);
-
-bot.onEvent(composedHandlers);
-
-...
-```
-
-Each event came from bot will be handled by function handler1.
-
-Call `next()` in function handler1 and it will go to function handler2.
-
-more [example](https://github.com/Yoctol/bottender/tree/master/examples/middleware) for middleware.

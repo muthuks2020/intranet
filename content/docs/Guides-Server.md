@@ -1,136 +1,19 @@
 ---
-title: HTTP server
-date: "2017-11-22"
+title: Content
+
 ---
 
-Bottender supports the following HTTP servers. You can choose one of them to develop your own bots.
 
-- [Express](#express)
-- [Koa](#koa)
-- [Micro](#micro)
-- [Restify](#restify)
 
-## Parameters
+## Heading
 
-The `createServer` function accepts two parameters:
 
-- [Bot Instance](#bot-instance) (required)
-- [Options](#options)
 
-### Bot Instance
+```sh
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-All you need to do is to use the right `createServer` function according to the platform and pass the bot instance to get the server.
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-For example:
 
-```js
-const { createServer } = require('bottender/express');
-
-const bot = require('./bot'); // implement your bot logic
-
-const server = createServer(bot);
-
-server.listen(5000, () => {
-  console.log('server is running on 5000 port...');
-});
 ```
-
-### Options
-
-If you are developing a Messenger bot and you want to use your own verify token, you can pass options object with `verifyToken` key.
-
-For example:
-
-```js
-const { createServer } = require('bottender/express');
-
-const bot = require('./bot'); // implement your Messenger bot logic
-
-const server = createServer(bot, {
-  verifyToken: '__FILL_YOUR_VERIFY_TOKEN_HERE__',
-});
-
-server.listen(5000, () => {
-  console.log('server is running on 5000 port...');
-});
-```
-
-## Servers
-
-### Express
-
-> Fast, unopinionated, minimalist web framework for Node.js.  
-> https://github.com/expressjs/express
-
-Example:
-
-```js
-const { createServer } = require('bottender/express');
-
-const bot = require('./bot'); // implement your bot logic
-
-const server = createServer(bot);
-
-server.listen(5000, () => {
-  console.log('server is running on 5000 port...');
-});
-```
-
-The full `Express` server example is [here](https://github.com/Yoctol/bottender/tree/master/examples/server-express).
-
-### Koa
-
-> Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs.  
-> https://github.com/koajs/koa
-
-Example:
-
-```js
-const { createServer } = require('bottender/koa');
-
-const bot = require('./bot'); // implement your bot logic
-
-const server = createServer(bot);
-
-server.listen(5000, () => {
-  console.log('server is running on 5000 port...');
-});
-```
-
-The full `Koa` server example is [here](https://github.com/Yoctol/bottender/tree/master/examples/server-koa).
-
-### Micro
-
-> Asynchronous HTTP microservices  
-> https://github.com/zeit/micro
-
-Example:
-
-```js
-const { createRequestHandler } = require('bottender/micro');
-
-const bot = require('./bot'); // implement your bot logic
-
-module.exports = createRequestHandler(bot);
-```
-
-The full `Micro` server example is [here](https://github.com/Yoctol/bottender/tree/master/examples/server-micro).
-
-### Restify
-
-> A Node.js web service framework optimized for building semantically correct RESTful web services ready for production use at scale. restify optimizes for introspection and performance, and is used in some of the largest Node.js deployments on Earth.  
-> https://github.com/restify/node-restify
-
-```js
-const { createServer } = require('bottender/restify');
-
-const bot = require('./bot'); // implement your bot logic
-
-const server = createServer(bot);
-
-server.listen(5000, () => {
-  console.log('server is running on 5000 port...');
-});
-```
-
-The full `Restify` server example is [here](https://github.com/Yoctol/bottender/tree/master/examples/server-restify).

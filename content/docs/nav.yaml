@@ -2,73 +2,61 @@
   items:
     - id: docs/GettingStarted
       title: Getting Started
-- title: Platforms
+- title: Document 1
   items:
     - id: docs/Platforms-Console
-      title: Console
+      title: Document 1.1
     - id: docs/Platforms-Messenger
-      title: Messenger
+      title: Document 1.2
     - id: docs/Platforms-LINE
-      title: LINE
+      title: Document 1.3
     - id: docs/Platforms-Slack
-      title: Slack
+      title: Document 1.4
     - id: docs/Platforms-Telegram
-      title: Telegram
+      title: Document 1.5
     - id: docs/Platforms-Viber
-      title: Viber
-- title: Guides
+      title: Document 1.6
+- title: Events 1
   items:
     - id: docs/Guides-Commands
-      title: Commands
+      title: Events 1.1
     - id: docs/Guides-Deployment
-      title: Deployment
+      title: Events 1.2
     - id: docs/Guides-ErrorHandling
-      title: Error Handling
+      title: Events 1.3
     - id: docs/Guides-Intents
-      title: Intents
-    - id: docs/Guides-Middleware
-      title: Middleware
+      title: Events 1.4
     - id: docs/Guides-Server
-      title: Server
+      title: Events 1.5
     - id: docs/Guides-Session
-      title: Session
+      title: Events 1.6
     - id: docs/Guides-State
-      title: State
+      title: Events 1.7
     - id: docs/Guides-Testing
-      title: Testing
+      title: Events 1.8
     - id: docs/Guides-CustomConnector
-      title: Custom Connector
-    - id: docs/Guides-Troubleshooting
-      title: Troubleshooting
-- title: API Reference
+      title: Events 1.9
+
+- title: Event Pictires
   items:
     - id: docs/APIReference-Context
-      title: Context
+      title: Event Pictires 1
     - id: docs/APIReference-ConsoleContext
-      title: ConsoleContext
+      title: Event Pictires 2 
     - id: docs/APIReference-MessengerContext
-      title: MessengerContext
+      title: Event Pictires 3
     - id: docs/APIReference-LineContext
-      title: LineContext
+      title: Event Pictires 4
     - id: docs/APIReference-SlackContext
-      title: SlackContext
+      title: Event Pictires 5 
     - id: docs/APIReference-TelegramContext
-      title: TelegramContext
+      title: Event Pictires 6
     - id: docs/APIReference-ViberContext
-      title: ViberContext
+      title: Event Pictires 7
     - id: docs/APIReference-Event
-      title: Event
+      title: Event Pictires 8
     - id: docs/APIReference-ConsoleEvent
-      title: ConsoleEvent
+      title: Event Pictires 9
     - id: docs/APIReference-MessengerEvent
-      title: MessengerEvent
-    - id: docs/APIReference-LineEvent
-      title: LineEvent
-    - id: docs/APIReference-SlackEvent
-      title: SlackEvent
-    - id: docs/APIReference-TelegramEvent
-      title: TelegramEvent
-    - id: docs/APIReference-ViberEvent
-      title: ViberEvent
-    - id: docs/APIReference-Handler
-      title: Handler
+      title: Event Pictires 10 
+   
