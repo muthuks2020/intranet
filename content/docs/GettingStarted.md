@@ -1,24 +1,12 @@
 ---
 title: Getting Started
-
+date: "2017-10-17"
 ---
 
-## Getting start at Enqeruo
+Example:
 
-We are a technology solutions company helping customers through their digital transformation journey. Headquartered in Silicon Valley, California, our core focus is on delivering impact for large enterprises
+```js
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+```
 
-## Parking
 
-We are a technology solutions company helping customers through their digital transformation journey. Headquartered in Silicon Valley, California, our core focus is on delivering impact for large enterprises
-
-## Holidays
-
-We are a technology solutions company helping customers through their digital transformation journey. Headquartered in Silicon Valley, California, our core focus is on delivering impact for large enterprises
-
-## BU and Practices
-
-We are a technology solutions company helping customers through their digital transformation journey. Headquartered in Silicon Valley, California, our core focus is on delivering impact for large enterprises
-
-## Leads BU / Practice
-
-We are a technology solutions company helping customers through their digital transformation journey. Headquartered in Silicon Valley, California, our core focus is on delivering impact for large enterprises

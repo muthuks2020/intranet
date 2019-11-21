@@ -1,8 +1,13 @@
 ---
-title: Content
-date: "2019-10-20"
+title: Document2
+date: "2017-11-14"
 ---
 
 
+Example:
 
-## content
+```js
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+```
+
+

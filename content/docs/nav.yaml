@@ -2,61 +2,47 @@
   items:
     - id: docs/GettingStarted
       title: Getting Started
-- title: Document 1
+- title: Documents
   items:
     - id: docs/Platforms-Console
-      title: Document 1.1
+      title: Document1
     - id: docs/Platforms-Messenger
-      title: Document 1.2
+      title: Document2
     - id: docs/Platforms-LINE
-      title: Document 1.3
+      title: Document3
     - id: docs/Platforms-Slack
-      title: Document 1.4
+      title: Document4
     - id: docs/Platforms-Telegram
-      title: Document 1.5
+      title: Document5
     - id: docs/Platforms-Viber
-      title: Document 1.6
-- title: Events 1
+      title: Document6
+- title: Guides
   items:
     - id: docs/Guides-Commands
-      title: Events 1.1
+      title: Guides1
     - id: docs/Guides-Deployment
-      title: Events 1.2
+      title: Guides2
     - id: docs/Guides-ErrorHandling
-      title: Events 1.3
+      title: Guides3
     - id: docs/Guides-Intents
-      title: Events 1.4
+      title: IGuides4
+    - id: docs/Guides-Middleware
+      title: Guides5
     - id: docs/Guides-Server
-      title: Events 1.5
+      title: Guides6
     - id: docs/Guides-Session
-      title: Events 1.6
+      title: Guides7
     - id: docs/Guides-State
-      title: Events 1.7
+      title: Guides8
     - id: docs/Guides-Testing
-      title: Events 1.8
-    - id: docs/Guides-CustomConnector
-      title: Events 1.9
-
-- title: Event Pictires
+      title: Guides9
+  
+- title: Archives
   items:
     - id: docs/APIReference-Context
-      title: Event Pictires 1
+      title: Event1
     - id: docs/APIReference-ConsoleContext
-      title: Event Pictires 2 
+      title: Event2
     - id: docs/APIReference-MessengerContext
-      title: Event Pictires 3
-    - id: docs/APIReference-LineContext
-      title: Event Pictires 4
-    - id: docs/APIReference-SlackContext
-      title: Event Pictires 5 
-    - id: docs/APIReference-TelegramContext
-      title: Event Pictires 6
-    - id: docs/APIReference-ViberContext
-      title: Event Pictires 7
-    - id: docs/APIReference-Event
-      title: Event Pictires 8
-    - id: docs/APIReference-ConsoleEvent
-      title: Event Pictires 9
-    - id: docs/APIReference-MessengerEvent
-      title: Event Pictires 10 
-   
+      title: Event3
+    
